@@ -125,6 +125,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="Violoin_plot_10_0.png" width="1000">
+<img src="output.png" width="1000">
 
 
