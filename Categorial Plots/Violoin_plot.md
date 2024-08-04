@@ -15,7 +15,7 @@ import pandas as pd
 
 
 ```python
-adeq = pd.read_csv('resultado_extract.csv', encoding='latin1')
+adeq = pd.read_csv('results_extract.csv', encoding='latin1')
 ```
 
 
@@ -24,8 +24,6 @@ adeq.head()
 ```
 
 
-
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
