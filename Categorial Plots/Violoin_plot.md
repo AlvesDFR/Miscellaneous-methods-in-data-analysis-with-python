@@ -115,7 +115,7 @@ ax.set_xlim(-0.5, len(top_10_ucnames) - 0.5)
 # Adjusting the layout
 plt.xlabel('Uc')
 plt.ylabel('Value')
-plt.title('Violin plot with swarm plot overlay for top 10 UcName with highest average values')
+plt.title('Violin plot for top 10 UcName with highest average values')
 
 # Adding the legend next to the graph
 handles = [plt.Line2D([0], [0], marker='o', color='w', label=top_10_ucnames[i], markersize=10, markerfacecolor=sns.color_palette('rainbow', n_colors=len(top_10_ucnames))[i]) for i in range(len(top_10_ucnames))]
