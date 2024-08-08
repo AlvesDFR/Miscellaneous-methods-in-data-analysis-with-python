@@ -11,7 +11,7 @@ from pycountry import countries
 ```python
 
 # Carregar o DataFrame
-df = pd.read_csv('C:/Users/OEM/Desktop/Nova pasta/species_count_by_countries.csv')
+df = pd.read_csv('PATH/species_count_by_countries.csv')
 
 ```
 
