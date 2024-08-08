@@ -1,1 +1,1 @@
-
+Interactive choropleth map created in python to indicate the number of invasive marine species per country. The number of species was counted by the EEZ (Exclusive Economic Zone) of each country. Approximately 100,000 records of occurrences of 91 species of invasive marine crustaceans were obtained and verified.
