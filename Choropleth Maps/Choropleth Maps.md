@@ -10,7 +10,7 @@ from pycountry import countries
 
 ```python
 
-# Carregar o DataFrame
+# Read the DataFrame
 df = pd.read_csv('PATH/species_count_by_countries.csv')
 
 ```
@@ -25,22 +25,21 @@ print(df.columns)
 
 
 ```python
-# Função para converter nomes de países para ISO Alpha-3
+# Function to convert country names to ISO Alpha-3
 def get_iso_alpha_3(country_name):
     try:
         return countries.lookup(country_name).alpha_3
     except LookupError:
         return None
 
-# Adicionando uma nova coluna com os códigos ISO Alpha-3
+# Adding a new column with ISO Alpha-3 codes
 df['iso_alpha_3'] = df['TERRITORY1'].apply(get_iso_alpha_3)
 
-# Verifique se todos os países foram corretamente mapeados
+# Check that all countries have been mapped correctly
 print(df.head())
 ```
 
        Unnamed: 0 TERRITORY1  specie iso_alpha_3
-    0           1     Alaska       2        None
     1           2    Albania       2         ALB
     2           3    Algeria       3         DZA
     3           4  Argentina       3         ARG
@@ -49,7 +48,7 @@ print(df.head())
 
 
 ```python
-# Criar o mapa coroplético com dados
+# Create choropleth map with data
 data = go.Choropleth(
     locations=df['iso_alpha_3'],
     locationmode='ISO-3',
@@ -66,7 +65,7 @@ data = go.Choropleth(
 
 ```python
 
-# Atualizar o layout para mostrar contornos dos países e configurar o mapa
+# Update the layout to show country outlines and configure the map
 layout = go.Layout(
     title='Number of Invasive Species',
     geo=dict(
@@ -86,7 +85,7 @@ layout = go.Layout(
     )
 )
 
-# Criar o mapa
+# Create map
 choromap = go.Figure(data=[data], layout=layout)
 choromap.show()
 ```
